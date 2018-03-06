@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: white;
+            font-size: 12px
+        }
+
+        h1 {
+            color: black;
+            text-align: center;
+        }
+
+        p {
+            font-family: verdana;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .button {
+            background-color: #1a88ff;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .buttons {
+            table-layout: fixed;
+            border-collapse: collapse;
+            background-color: #1a88ff;
+            text-align: center;
+        }
+
+        table, th, td {
+            border: 1px solid white;
+        }
+
+        input[type=text], select {
+            width: 100%;
+            padding: 20px 20px;
+            display: inline-block;
+            border: 5px solid #1a88ff;
+            border-radius: 0px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Simple Calculator</h1>
+    <form name="calculator">
+        <br>
+        <table class=buttons align="center" width="400">
+            <tr>
+                <th><input type="text" name="ans" value="" placeholder="0"><br></th>
+            </tr>
+        </table>
+        <table class=buttons align="center" width="400">
+            <tr>
+                <th><input type="button" class="button" value="1" onClick="document.calculator.ans.value+='1'">
+                <th><input type="button" class="button" value="2" onClick="document.calculator.ans.value+='2'">
+                <th><input type="button" class="button" value="3" onClick="document.calculator.ans.value+='3'">
+                <th><input type="button" class="button" value="+" onClick="document.calculator.ans.value+='+'">
+            </tr>
+            <tr>
+                <th><input type="button" class="button" value="4" onClick="document.calculator.ans.value+='4'">
+                <th><input type="button" class="button" value="5" onClick="document.calculator.ans.value+='5'">
+                <th><input type="button" class="button" value="6" onClick="document.calculator.ans.value+='6'">
+                <th><input type="button" class="button" value="-" onClick="document.calculator.ans.value+='-'">
+            </tr>
+            <tr>
+                <th><input type="button" class="button" value="7" onClick="document.calculator.ans.value+='7'">
+                <th><input type="button" class="button" value="8" onClick="document.calculator.ans.value+='8'">
+                <th><input type="button" class="button" value="9" onClick="document.calculator.ans.value+='9'">
+                <th><input type="button" class="button" value="*" onClick="document.calculator.ans.value+='*'">
+            </tr>
+            <tr>
+                <th><input type="button" class="button" value="0" onClick="document.calculator.ans.value+='0'">
+                <th><input type="button" class="button" value="." onClick="document.calculator.ans.value+='.'">
+                <th><input type="button" class="button" value="%" onClick="document.calculator.ans.value+='%'">
+                <th><input type="button" class="button" value="/" onClick="document.calculator.ans.value+='/'">
+            <tr>
+                <th><input type="reset" class="button" value="C">
+                <th><input type="button" class="button" value="^" onClick="document.calculator.ans.value+='**'">
+                <th><input type="button" class="button" value="sqrt" onClick="document.calculator.ans.value+='**0.5'">
+                <th><input type="button" class="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
