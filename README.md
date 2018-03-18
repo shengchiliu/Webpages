@@ -1,4 +1,4 @@
-# Html/CSS/JavaScript Programming Exercises
+# HTML/CSS/JavaScript Programming Exercises
 
 The following websites are very useful for learning Html/CSS/JavaScript.
 * https://www.w3schools.com/js/default.asp
