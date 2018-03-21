@@ -53,7 +53,7 @@ JavaScript Reference<br>
 ```
 
 ## CSS Property Usage
-```html
+```css
 selector { property: value }
 selector1, selector2, selector3 {
     property1: value1;
