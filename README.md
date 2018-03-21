@@ -68,11 +68,11 @@ selector1, selector2, selector3 {
 ```
 
 --------------------------------------------------------------------------------
-##Publish Website Online
-1. Buy a domina name
+## Publish Website Online
+**1. Buy a domina name**
 * https://www.godaddy.com/
-2. Rent a webhost
+**2. Rent a webhost**
 * https://checkout.hostgator.com/
 * https://www.siteground.com
-3. Upload your files to webhost
+**3. Upload your files to webhost**
 * https://cyberduck.io/
