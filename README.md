@@ -1,19 +1,18 @@
 # HTML/CSS/JavaScript Programming Exercises
 
 The following websites are very useful for learning Html/CSS/JavaScript.
-** http://htmldog.com
-** https://www.w3schools.com/js/default.asp
-** https://developer.mozilla.org/en-US/docs/Learn/JavaScript
-** http://www.runoob.com/js/js-tutorial.html
+* http://htmldog.com
+* https://www.w3schools.com/js/default.asp
+* https://developer.mozilla.org/en-US/docs/Learn/JavaScript
+* http://www.runoob.com/js/js-tutorial.html
 
-HTML/CSS Reference
-http://htmldog.com/references/
-
-JavaScript Reference
-https://developer.mozilla.org/bm/docs/Web/JavaScript/Reference
+HTML/CSS Reference<br>
+http://htmldog.com/references/<br>
+JavaScript Reference<br>
+https://developer.mozilla.org/bm/docs/Web/JavaScript/Reference<br>
 
 --------------------------------------------------------------------------------
-### Common HTML Tags & Attributes
+## Common HTML Tags & Attributes
 **&lt;link&gt;** commonly used to establish a link to a style sheet.<br>
 **&lt;meta&gt;** commonly used to define a character set or keyword meta information.<br>
 <br>
@@ -45,14 +44,14 @@ https://developer.mozilla.org/bm/docs/Web/JavaScript/Reference
 **&lt;strong&gt;** defines important text and renders, by default as bold.<br>
 
 --------------------------------------------------------------------------------
-### HTML Tag Usage
+## HTML Tag Usage
 ```html
 <tagname>Element content</tagname>
 <tagname attribute_name>Element content</tagname>
 <tagname attribute_name="attribute_value">Element content</tagname>
 ```
 
-### CSS Property Usage
+## CSS Property Usage
 ```html
 selector { property: value }
 selector1, selector2, selector3 {
