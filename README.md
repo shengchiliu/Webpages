@@ -7,18 +7,19 @@ The following websites are very useful for learning Html/CSS/JavaScript.
 * http://www.runoob.com/js/js-tutorial.html
 
 HTML/CSS Reference<br>
-http://htmldog.com/references/<br>
+* http://htmldog.com/references/<br>
 JavaScript Reference<br>
-https://developer.mozilla.org/bm/docs/Web/JavaScript/Reference<br>
+* https://developer.mozilla.org/bm/docs/Web/JavaScript/Reference<br>
 
 --------------------------------------------------------------------------------
 ## Common HTML Tags & Attributes
 **&lt;link&gt;** commonly used to establish a link to a style sheet.<br>
 **&lt;meta&gt;** commonly used to define a character set or keyword meta information.<br>
 <br>
-**&lt;p&gt;** tag defines a **paragraph** that contains text.<br>
 **&lt;div&gt;** tag defines a **division** or a section in an HTML document.<br>
 **id** attribute is used to uniquely identify an HTML element<br>
+<br>
+**&lt;p&gt;** tag defines a **paragraph** that contains text.<br>
 **&lt;span&gt;** tag is used to **group inline-elements** in a document.<br>
 <br>
 **&lt;h1&gt;** to **&lt;h6&gt;** Headings varying in weight<br>
