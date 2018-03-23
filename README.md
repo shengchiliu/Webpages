@@ -107,3 +107,4 @@ var obj = {
 
 **3. Upload your files to webhost**
 * https://cyberduck.io/
+* https://gist.github.com/learncodeacademy/393c8ec3ebaa92df9a29
