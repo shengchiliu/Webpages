@@ -87,14 +87,14 @@
 
 ---
 ## JSON Syntax
-```json
+```js
 var obj = {
     "key1":"value1",
     "key2":["v1", "v2", "v3"],
     "key3":{"key":"value"}
 };
 ```
-* In JSON, keys must be strings and written with double quotes.
+* In JSON, **keys** must be **strings** and written with **double quotes**.
 
 ---
 ## Publish Website Online
