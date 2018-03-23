@@ -100,6 +100,7 @@ var obj = {
 ## Publish Website Online
 **1. Buy a domina name**
 * https://www.godaddy.com/
+* https://www.namecheap.com
 
 **2. Rent a webhost**
 * https://checkout.hostgator.com/
