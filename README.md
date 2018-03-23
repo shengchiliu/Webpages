@@ -115,5 +115,5 @@ https://www.youtube.com/watch?v=vmekjPhQuCc&list=PLoYCgNOIyGAB_8_iq1cL8MVeun7cB6
 ```sh
 # Replace the following CAPITAL letters to your case
 $ ssh -p PORT_NUMBER USERNAME@IP_ADDRESS
-$ rsync -rvz -e 'ssh -p *PORT_NUMBER*' --progress --remove-sent-files ./LOCAL_FILE_PATH USERNAME@IP_ADDRESS:REMOTE_FILE_PATH
+$ rsync -rvz -e 'ssh -p PORT_NUMBER' --progress --remove-sent-files ./LOCAL_FILE_PATH USERNAME@IP_ADDRESS:REMOTE_FILE_PATH
 ```
