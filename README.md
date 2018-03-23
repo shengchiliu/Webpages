@@ -98,15 +98,21 @@ var obj = {
 
 ---
 ## Publish Website Online
-**1. Buy a domina name**
+#### 1. Buy a domina name
 * https://www.godaddy.com/
 * https://www.namecheap.com
 
-**2. Rent a webhost**
+#### 2. Rent a webhost
 * https://www.hostgator.com/
 * https://www.siteground.com
 
-**3. Upload your files to webhost**
+#### 3. Upload your files to webhost
 * https://cyberduck.io/
 * https://gist.github.com/learncodeacademy/393c8ec3ebaa92df9a29<br>
 https://www.youtube.com/watch?v=vmekjPhQuCc&list=PLoYCgNOIyGAB_8_iq1cL8MVeun7cB6eNc&index=29
+
+#### 3.1 In Linux/MacOS, you can also use **SSH** to access your server and use **rsync** to sent files
+```sh
+$ ssh -p PORT_NUMBER USERNAME@IP_ADDRESS
+$ rsync -rvz -e 'ssh -p 2222' --progress --remove-sent-files ./FILE_PATH USERNAME@IP_ADDRESS:FILE_PATH
+```
