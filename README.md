@@ -103,7 +103,7 @@ var obj = {
 * https://www.namecheap.com
 
 **2. Rent a webhost**
-* https://checkout.hostgator.com/
+* https://www.hostgator.com/
 * https://www.siteground.com
 
 **3. Upload your files to webhost**
