@@ -1,10 +1,14 @@
 # HTML/CSS/JavaScript Programming Exercises
 
-**Html/CSS/JavaScript Tutorial**
+**HTML/CSS/JavaScript Tutorials**
 * http://htmldog.com
 * https://www.w3schools.com/js/default.asp
 * https://developer.mozilla.org/en-US/docs/Learn/JavaScript
 * http://www.runoob.com/js/js-tutorial.html
+
+**YouTube Tutorials for HTML/CSS/JavaScript**
+* https://www.youtube.com/playlist?list=PLoYCgNOIyGAB_8_iq1cL8MVeun7cB6eNc
+* https://www.youtube.com/playlist?list=PL-osiE80TeTucQUM10Ezv4S7SVoFozLMK
 
 **HTML/CSS Reference**
 * http://htmldog.com/references/
@@ -16,7 +20,7 @@
 * https://getbootstrap.com
 * http://jquery.com
 
---------------------------------------------------------------------------------
+---
 ## Common HTML Tags & Attributes
 **&lt;link&gt;** commonly used to establish a link to a style sheet.<br>
 **&lt;meta&gt;** commonly used to define a character set or keyword meta information.<br>
@@ -49,7 +53,7 @@
 **&lt;em&gt;** defines emphasised text and renders, by default as italic.<br>
 **&lt;strong&gt;** defines important text and renders, by default as bold.<br>
 
---------------------------------------------------------------------------------
+---
 ## HTML Tag Usage
 ```html
 <tagname>Element content</tagname>
@@ -67,7 +71,28 @@ selector1, selector2, selector3 {
 }
 ```
 
---------------------------------------------------------------------------------
+---
+## jQuery Library Usage
+```html
+<script src="bower_components/jquery/jquery.js"></script>
+<script>
+    $(function() {
+        $("#ID").METHOD();
+    });
+</script>
+```
+
+---
+## JavaScript Object Notation (JSON) Syntax
+```js
+var obj = {
+    "name1":"value1",
+    "name2":["v1", "v2", "v3"],
+    "name3":{"name":"value"}
+};
+```
+
+---
 ## Publish Website Online
 **1. Buy a domina name**
 * https://www.godaddy.com/
