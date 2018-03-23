@@ -62,13 +62,15 @@
 ```
 
 ## CSS Property Usage
-```css
-selector { property: value }
-selector1, selector2, selector3 {
-    property1: value1;
-    property2: value2;
-    property3: value3;
-}
+```html
+<style>
+    selector { property1:value1; property2:value2;}
+    selector1, selector2, selector3 {
+        property1:value1;
+        property2:value2;
+        property3:value3;
+    }
+</style>
 ```
 
 ---
@@ -83,14 +85,15 @@ selector1, selector2, selector3 {
 ```
 
 ---
-## JavaScript Object Notation (JSON) Syntax
+## JSON Syntax
 ```js
 var obj = {
-    "name1":"value1",
-    "name2":["v1", "v2", "v3"],
-    "name3":{"name":"value"}
+    "key1":"value1",
+    "key2":["v1", "v2", "v3"],
+    "key3":{"key":"value"}
 };
 ```
+* In JSON, keys must be strings, written with double quotes.
 
 ---
 ## Publish Website Online
