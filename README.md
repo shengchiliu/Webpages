@@ -65,6 +65,7 @@
 ```html
 <style>
     selector { property1:value1; property2:value2;}
+
     selector1, selector2, selector3 {
         property1:value1;
         property2:value2;
@@ -86,14 +87,14 @@
 
 ---
 ## JSON Syntax
-```js
+```json
 var obj = {
     "key1":"value1",
     "key2":["v1", "v2", "v3"],
     "key3":{"key":"value"}
 };
 ```
-* In JSON, keys must be strings, written with double quotes.
+* In JSON, keys must be strings and written with double quotes.
 
 ---
 ## Publish Website Online
