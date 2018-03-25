@@ -106,14 +106,12 @@ var obj = {
 * https://www.hostgator.com/
 * https://www.siteground.com
 
-#### 3. Upload your files to webhost
+#### 3a. Upload your files to webhost (Windows/MacOS)
 * https://cyberduck.io/
-* https://gist.github.com/learncodeacademy/393c8ec3ebaa92df9a29<br>
-https://www.youtube.com/watch?v=vmekjPhQuCc&list=PLoYCgNOIyGAB_8_iq1cL8MVeun7cB6eNc&index=29
 
-#### 3.1 In Linux/MacOS, you can also use **ssh** to access your server and use **scp** to copy files from local directory to remote directory
+#### 3b. Use **ssh** to access your server and **scp** to copy files from local to remote (Linux/MacOS)
 ```sh
 # Replace the following CAPITAL letters as appreciate
-$ ssh -p PORT_NUMBER USERNAME@IP_ADDRESS
-$ scp -P PORT_NUMBER LOCAL_DIR USERNAME@IP_ADDRESS:ROMOTE_DIR
+$ ssh -p PORT_NUMBER USERNAME@IP_ADDRESS                            # ex. ssh -p 2222 abc@123.123.1.1
+$ scp -P PORT_NUMBER LOCAL_DIR USERNAME@IP_ADDRESS:ROMOTE_DIR       # ex. scp -p 2222 ./file.txt abc@123.123.1.1:~/
 ```
