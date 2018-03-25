@@ -111,9 +111,9 @@ var obj = {
 * https://gist.github.com/learncodeacademy/393c8ec3ebaa92df9a29<br>
 https://www.youtube.com/watch?v=vmekjPhQuCc&list=PLoYCgNOIyGAB_8_iq1cL8MVeun7cB6eNc&index=29
 
-#### 3.1 In Linux/MacOS, you can also use **SSH** to access your server and use **rsync** to sent files
+#### 3.1 In Linux/MacOS, you can also use **ssh** to access your server and use **scp** to copy files from local directory to remote directory
 ```sh
-# Replace the following CAPITAL letters to your case
+# Replace the following CAPITAL letters as appreciate
 $ ssh -p PORT_NUMBER USERNAME@IP_ADDRESS
-$ rsync -rvz -e 'ssh -p PORT_NUMBER' --progress --remove-sent-files ./LOCAL_FILE_PATH USERNAME@IP_ADDRESS:REMOTE_FILE_PATH
+$ scp -P PORT_NUMBER LOCAL_DIR USERNAME@IP_ADDRESS:ROMOTE_DIR
 ```
