@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<p id="demo1"></p>
+
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	zoomEnabled: true,
+	title:{
+		text: "Try Zooming and Panning"
+	},
+	axisY :{
+		includeZero:false
+	},
+	data: data  // random generator below
+});
+chart.render();
+
+}
+
+var limit = 1000;
+
+var y = 0;
+var data = [];
+var dataSeries = { type: "line" };
+var dataPoints = [];
+
+// Input Data ------------------------------------
+var arr = [2,4,46,21,54,7,3,2,3,6,21,12];
+document.getElementById("demo1").innerHTML = arr;
+// -----------------------------------------------
+
+for (var i = 0; i < arr.length; i++) {
+	dataPoints.push({
+		x: i,
+		y: arr[i]
+	});
+}
+
+dataSeries.dataPoints = dataPoints;
+data.push(dataSeries);
+
+</script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script></head>
+</body>
+</html>
