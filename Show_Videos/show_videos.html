@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html>
+
 <body>
 
-<!-- <button onclick="getPlaySpeed()" type="button">What is the playback speed?</button> -->
-<button onclick="setPlaySpeed()" type="button">Set video to be play in slow motion</button><br>
+    <!-- <button onclick="getPlaySpeed()" type="button">What is the playback speed?</button> -->
+    <button onclick="setPlaySpeed()" type="button">Set video to be play in slow motion</button>
+    <br>
 
-<video id="myVideo" width="320" height="176" controls>
-  <source src="/Users/Vincent/Desktop/九章算法/九章算法_李娄云（15年3月）/01_面试技巧与CodingStyle/面试技巧与CodingStyle.mp4" type="video/mp4">
-  <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
-  Your browser does not support HTML5 video.
-</video>
+    <video id="myVideo" width="800" height="600" controls>
+        <source src="video.mp4" type="video/mp4">
+        <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+        Your browser does not support HTML5 video.
+    </video>
 
-<script>
-var vid = document.getElementById("myVideo").onkeypress = function(){myScript("d")};
+    <script>
+        var vid = document.getElementById("myVideo").onkeypress = function() {
+            myScript("d")
+        };
 
-// function getPlaySpeed() {
-//     alert(vid.playbackRate);
-// }
+        // function getPlaySpeed() {
+        //     alert(vid.playbackRate);
+        // }
 
-function setPlaySpeed("d") {
-    vid.playbackRate = 0.5;
-}
-</script>
+        function setPlaySpeed("d") {
+            vid.playbackRate = 0.5;
+        }
+    </script>
 
-<!-- <p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p> -->
+    <!-- <p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p> -->
 
 </body>
+
 </html>
