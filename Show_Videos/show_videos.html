@@ -2,32 +2,23 @@
 <html>
 
 <body>
+    <div style="text-align:center" onkeypress="myFunction(event)">
+        <video id="myVideo" width="480" height="320" controls>
+            <source src="video.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+        </video>
+    </div>
 
-    <!-- <button onclick="getPlaySpeed()" type="button">What is the playback speed?</button> -->
-    <button onclick="setPlaySpeed()" type="button">Set video to be play in slow motion</button>
-    <br>
-
-    <video id="myVideo" width="800" height="600" controls>
-        <source src="video.mp4" type="video/mp4">
-        <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
-        Your browser does not support HTML5 video.
-    </video>
+    <!-- <input  onkeypress="myFunction(event)"> -->
 
     <script>
-        var vid = document.getElementById("myVideo").onkeypress = function() {
-            myScript("d")
-        };
+        var vid = document.getElementById("myVideo");
 
-        // function getPlaySpeed() {
-        //     alert(vid.playbackRate);
-        // }
-
-        function setPlaySpeed("d") {
-            vid.playbackRate = 0.5;
-        }
+        document.addEventListener("keydown", function(event) {
+            if (event.keyCode == 32) {
+                vid.playbackRate = 2;
+            }
+        });
     </script>
-
-    <!-- <p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p> -->
 
 </body>
 
