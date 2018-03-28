@@ -8,16 +8,21 @@
         </video>
     </div>
 
-    <!-- <input  onkeypress="myFunction(event)"> -->
-
     <script>
         var vid = document.getElementById("myVideo");
-
+        var flag = false;
         document.addEventListener("keydown", function(event) {
             if (event.keyCode == 32) {
-                vid.playbackRate = 2;
+                if (flag == false) {
+                    vid.pause();
+                } else {
+                    vid.play();
+                }
+                flag = !flag;
+                // vid.playbackRate = 2;
             }
         });
+
     </script>
 
 </body>
