@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    h3 {font-family: "Lato", sans-serif;}
+    body, html {
+        height: 100%;
+        color: #777;
+        line-height: 1.8;
+    }
+    textarea {
+        min-height: 150px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
+</style>
+<body>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-32" id="contact">
+    <h3 class="w3-center">WHERE I LIVE</h3>
+    <p class="w3-center"><em>I'd love your feedback!</em></p>
+    <div class="w3-row w3-padding-32 w3-section">
+        <div class="w3-col m4 w3-container">
+            <div id="googleMap" class="w3-round-large" style="width:100%; height:400px;"></div>
+        </div>
+        <div class="w3-col m8 w3-panel">
+            <div class="w3-large w3-margin-bottom">
+                <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Cambridge, UK<br>
+                <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: shengchiliu [at] gmail.com
+            </div>
+            <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+
+            <form action="action_page.php" method="post">
+                <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                    <div class="w3-half">
+                        <input class="w3-input w3-border w3-round-large w3-hover-border-cyan" type="text" placeholder="Name" required name="Name">
+                    </div>
+                    <div class="w3-half">
+                        <input class="w3-input w3-border w3-round-large w3-hover-border-cyan" type="text" placeholder="Email" required name="Email">
+                    </div>
+                </div>
+                <textarea class="w3-input w3-border w3-round-large w3-hover-border-cyan" type="text" placeholder="Message" required name="Message"></textarea>
+                <button class="w3-button w3-black w3-right w3-section" type="submit"><i class="fa fa-paper-plane"></i> SEND MESSAGE</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Add Google Maps -->
+<script>
+    function myMap() {
+        myCenter=new google.maps.LatLng(52.205337, 0.121817);
+        var mapOptions= {
+            center:myCenter,
+            zoom:12, scrollwheel: false, draggable: false,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+        var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: myCenter,
+        });
+        marker.setMap(map);
+    }
+
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXF674Q7J8nyamoet3cYxy2GTvVERrnTo&callback=myMap"></script>
+
+</body>
+</html>
