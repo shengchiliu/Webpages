@@ -112,6 +112,6 @@ var obj = {
 #### 3b. Use **ssh** to access your server and **scp** to copy files from local to remote (Linux/MacOS)
 ```sh
 # Replace the following CAPITAL letters as appreciate
-$ ssh -p PORT_NUMBER USERNAME@IP_ADDRESS                            # ex. ssh -p 2222 abc@123.123.1.1
-$ scp -P PORT_NUMBER LOCAL_DIR USERNAME@IP_ADDRESS:ROMOTE_DIR       # ex. scp -p 2222 ./file abc@123.123.1.1:~/
+$ ssh -P PORT_NUMBER USERNAME@IP_ADDRESS                            # ex. ssh -P 2222 abc@123.123.1.1
+$ scp -P PORT_NUMBER LOCAL_DIR USERNAME@IP_ADDRESS:ROMOTE_DIR       # ex. scp -P 2222 ./file abc@123.123.1.1:~/
 ```
