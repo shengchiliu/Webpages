@@ -1,6 +1,6 @@
 # D3.js Usage
 
-Coding Process: 
+##### Coding Process
  1. 設定svg
  2. 將data讀入browser記憶體
  3. 將data分類儲存成你要的格式
@@ -8,4 +8,10 @@ Coding Process:
  5. 使用網頁元素綁上的data將網頁元素視覺化
  6. 依照使用者操作變化網頁元素的視覺元素，達到互動的效果
 
-* ref: https://www.youtube.com/watch?v=W7pOJjy1qwI 
+##### Call Local Server
+```sh
+$ python -m SimpleHTTPServer 8000       # for python2
+$ python3 -m http.server 8000           # for python3
+```
+* https://www.youtube.com/watch?v=k2jMVXaPLQs
+
