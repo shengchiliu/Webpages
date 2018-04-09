@@ -21,6 +21,7 @@
 * http://jquery.com
 
 ---
+
 ## Common HTML Tags & Attributes
 
 **&lt;link&gt;** commonly used to establish a link to a style sheet.<br>
@@ -53,6 +54,7 @@
 **&lt;hr&gt;** horizontal rule tag is used to show a thematic break, by default renders as a simple horizontal line.<br>
 **&lt;em&gt;** defines emphasised text and renders, by default as italic.<br>
 **&lt;strong&gt;** defines important text and renders, by default as bold.<br>
+
 ---
 
 ## HTML Tag Usage
