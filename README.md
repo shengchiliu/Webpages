@@ -76,6 +76,7 @@
     }
 </style>
 ```
+
 ---
 
 ## jQuery Library Usage
@@ -87,6 +88,7 @@
     });
 </script>
 ```
+
 ---
 
 ## JSON Syntax
@@ -98,6 +100,7 @@ var obj = {
 };
 ```
 * In JSON, **keys** must be **strings** and written with **double quotes**.
+
 ---
 
 ## Publish Website Online
@@ -118,6 +121,7 @@ var obj = {
 $ ssh -P PORT_NUMBER USERNAME@IP_ADDRESS                            # ex. ssh -P 2222 abc@123.123.1.1
 $ scp -P PORT_NUMBER LOCAL_DIR USERNAME@IP_ADDRESS:ROMOTE_DIR       # ex. scp -P 2222 ./file abc@123.123.1.1:~/
 ```
+
 ---
 
 ## Install LAMP (Linux, Apache, MySQL, PHP)
