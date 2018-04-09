@@ -19,8 +19,8 @@
 **Essetial Library, Framework and Teamplates**
 * https://getbootstrap.com
 * http://jquery.com
-
 ---
+
 ## Common HTML Tags & Attributes
 **&lt;link&gt;** commonly used to establish a link to a style sheet.<br>
 **&lt;meta&gt;** commonly used to define a character set or keyword meta information.<br>
@@ -52,8 +52,8 @@
 **&lt;hr&gt;** horizontal rule tag is used to show a thematic break, by default renders as a simple horizontal line.<br>
 **&lt;em&gt;** defines emphasised text and renders, by default as italic.<br>
 **&lt;strong&gt;** defines important text and renders, by default as bold.<br>
-
 ---
+
 ## HTML Tag Usage
 ```html
 <tagname>Element content</tagname>
@@ -73,8 +73,8 @@
     }
 </style>
 ```
-
 ---
+
 ## jQuery Library Usage
 ```html
 <script src="bower_components/jquery/jquery.js"></script>
@@ -84,8 +84,8 @@
     });
 </script>
 ```
-
 ---
+
 ## JSON Syntax
 ```js
 var obj = {
@@ -95,8 +95,8 @@ var obj = {
 };
 ```
 * In JSON, **keys** must be **strings** and written with **double quotes**.
-
 ---
+
 ## Publish Website Online
 #### 1. Buy a domina name
 * https://www.godaddy.com/
@@ -114,4 +114,46 @@ var obj = {
 # Replace the following CAPITAL letters as appreciate
 $ ssh -P PORT_NUMBER USERNAME@IP_ADDRESS                            # ex. ssh -P 2222 abc@123.123.1.1
 $ scp -P PORT_NUMBER LOCAL_DIR USERNAME@IP_ADDRESS:ROMOTE_DIR       # ex. scp -P 2222 ./file abc@123.123.1.1:~/
+```
+---
+
+## Install LAMP (Linux, Apache, MySQL, PHP)
+#### Install Apache
+```sh
+$ sudo apt-get update
+$ sudo apt-get install apache2
+# Check Apache
+# Open Browser with address http://localhost
+```
+
+#### Install PHP
+```sh
+$ sudo apt-get install php
+$ sudo /etc/init.d/apache2 restart
+# Check PHP
+$ sudo vim /var/www/html/hello.php
+# Open Browser with address http://localhost/hello.php
+```
+
+#### Install MySQL
+```sh
+$ sudo apt-get install mysql-server
+# Check MySQL
+$ mysql -u root -p
+$ \\q
+```
+
+#### Install phpMyAdmin
+```sh
+$ sudo apt-get install phpmyadmin
+# Check phpMyAdmin
+$ sudo vim /etc/php/7.0/apache2/php.ini
+# uncomment extension=msql.so
+# Add the following in the php.ini file
+# Include /etc/phpmyadmin/apache.conf
+$ sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+$ sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+$ sudo service apache2 restart
+$ sudo /etc/init.d/apache2 restart
+# Open Browser with address http://localhost/phpmyadmin/
 ```
