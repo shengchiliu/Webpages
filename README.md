@@ -21,8 +21,8 @@
 * http://jquery.com
 ---
 
-## Common HTML Tags & Attributes\
-
+## Common HTML Tags & Attributes
+<br>
 **&lt;link&gt;** commonly used to establish a link to a style sheet.<br>
 **&lt;meta&gt;** commonly used to define a character set or keyword meta information.<br>
 <br>
