@@ -19,10 +19,10 @@
 **Essetial Library, Framework and Teamplates**
 * https://getbootstrap.com
 * http://jquery.com
----
 
+---
 ## Common HTML Tags & Attributes
-\
+
 **&lt;link&gt;** commonly used to establish a link to a style sheet.<br>
 **&lt;meta&gt;** commonly used to define a character set or keyword meta information.<br>
 <br>
