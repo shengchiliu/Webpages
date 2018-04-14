@@ -35,11 +35,9 @@
     <div class="index-video-wrapper" style="text-align:center">
         <video id="myVideo" width="480" height="320" controls autoplay poster="placeholder.png">
             <!-- <source src="第二次课.mp4" type="video/mp4"> -->
-            <!-- Your browser does not support HTML5 video. -->
         </video>
         <br>
         <input type="file" accept="video/*"/>
-        <!-- <input type='file' value="./" onchange="readURL(this)"> -->
     </div>
 
     <script>
@@ -112,40 +110,10 @@
         }, false);
 
         // Open File
-        // function readURL(input) {
-        //     if (input.files && input.files[0]) {
-        //         var reader = new FileReader();
-        //         reader.onload = function(event) {
-        //             $('#myVideo').attr('src', event.target.result).load();
-        //             vid.play();
-        //         }
-        //         reader.readAsDataURL(input.files[0]);
-        //     }
-        // }
-
         (function localFileVideoPlayer() {
-        // 'use strict'
             var URL = window.URL || window.webkitURL
-            // var displayMessage = function (message, isError) {
-            //     var element = document.querySelector('#message')
-            //     element.innerHTML = message
-            //     element.className = isError ? 'error' : 'info'
-            // }
             var playSelectedFile = function (event) {
                 var file = this.files[0]
-                
-                // var type = file.type
-                // var vid = document.querySelector('video')
-                // var canPlay = vid.canPlayType(type)
-                // if (canPlay === '') canPlay = 'no'
-                //     var message = 'Can play type "' + type + '": ' + canPlay
-                //     var isError = canPlay === 'no'
-                //     displayMessage(message, isError)
-
-                // if (isError) {
-                //     return
-                // }
-
                 var fileURL = URL.createObjectURL(file)
                 vid.src = fileURL
             }
