@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Media Player</title>
+    <style>
+        video {
+            border: 2px solid #888;
+        }
+
+        #myVideo {
+            /* height: 100%;
+            width: 100%; */
+            object-fit: contain;
+            z-index: -100;
+            right: 0;
+            bottom: 0;
+            background: url(placeholder.png) no-repeat center center;
+            background-size: contain;
+            overflow: hidden;
+        }
+
+        .index-video-wrapper {
+            height: 100%;
+            width: 100%;
+            background: url(placeholder.png) no-repeat center center;
+            background-size: contain;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <!-- <script src="localplay.js"></script> -->
+</head>
+
+<body>
+    <div class="index-video-wrapper" style="text-align:center">
+        <video id="myVideo" width="480" height="320" controls autoplay poster="placeholder.png">
+            <!-- <source src="第二次课.mp4" type="video/mp4"> -->
+            <!-- Your browser does not support HTML5 video. -->
+        </video>
+        <br>
+        <input type="file" accept="video/*"/>
+        <!-- <input type='file' value="./" onchange="readURL(this)"> -->
+    </div>
+
+    <script>
+        var vid = document.getElementById("myVideo");
+
+        // Pause
+        document.addEventListener("keydown", function(event) {
+            if (event.keyCode == 32) {
+                if (vid.paused) {
+                    vid.play();
+                } else {
+                    vid.pause();
+                }
+            }
+        }); 
+
+        // Speed Up
+        document.addEventListener("keydown", function(event) {
+            if (event.keyCode == 38) {
+                vid.playbackRate += 0.1;
+                console.log(vid.playbackRate);
+            }
+        });
+
+        // Speed Down
+        document.addEventListener("keydown", function(event) {
+            if (event.keyCode == 40) {
+                vid.playbackRate -= 0.1;
+                console.log(vid.playbackRate);
+            }
+        });
+
+        // Forward
+        document.addEventListener("keydown", function(event) {
+            if (event.keyCode == 39) {
+                vid.currentTime += 10;
+                console.log(this.currentTime);
+            }
+        });
+
+        // Backward
+        document.addEventListener("keydown", function(event) {
+            if (event.keyCode == 37) {
+                vid.currentTime -= 3;
+                console.log(this.currentTime);
+            }
+        });
+
+        // Full Screen
+        function toggleFullScreen() {
+            if (!document.mozFullScreen && !document.webkitFullScreen) {
+                if (vid.mozRequestFullScreen) {
+                    vid.mozRequestFullScreen();
+                } else {
+                    vid.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+                }
+            } else {
+                if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else {
+                    document.webkitCancelFullScreen();
+                }
+            }
+        };
+
+        document.addEventListener("keydown", function(event) {
+            if (event.keyCode == 70) {
+                toggleFullScreen();
+            }
+        }, false);
+
+        // Open File
+        // function readURL(input) {
+        //     if (input.files && input.files[0]) {
+        //         var reader = new FileReader();
+        //         reader.onload = function(event) {
+        //             $('#myVideo').attr('src', event.target.result).load();
+        //             vid.play();
+        //         }
+        //         reader.readAsDataURL(input.files[0]);
+        //     }
+        // }
+
+        (function localFileVideoPlayer() {
+        // 'use strict'
+            var URL = window.URL || window.webkitURL
+            // var displayMessage = function (message, isError) {
+            //     var element = document.querySelector('#message')
+            //     element.innerHTML = message
+            //     element.className = isError ? 'error' : 'info'
+            // }
+            var playSelectedFile = function (event) {
+                var file = this.files[0]
+                
+                // var type = file.type
+                // var vid = document.querySelector('video')
+                // var canPlay = vid.canPlayType(type)
+                // if (canPlay === '') canPlay = 'no'
+                //     var message = 'Can play type "' + type + '": ' + canPlay
+                //     var isError = canPlay === 'no'
+                //     displayMessage(message, isError)
+
+                // if (isError) {
+                //     return
+                // }
+
+                var fileURL = URL.createObjectURL(file)
+                vid.src = fileURL
+            }
+            var inputNode = document.querySelector('input')
+            inputNode.addEventListener('change', playSelectedFile, false)
+        })()
+
+    </script>
+</body>
+
+</html>
