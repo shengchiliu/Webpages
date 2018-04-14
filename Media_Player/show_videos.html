@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Media Player</title>
+    <style>
+        video {
+            border: 2px solid #888;
+        }
+
+        #myVideo {
+            /* height: 100%;
+            width: 100%; */
+            object-fit: contain;
+            z-index: -100;
+            right: 0;
+            bottom: 0;
+            background: url(./placeholder.jpg) no-repeat center center;
+            background-size: contain;
+            overflow: hidden;
+        }
+
+        .index-video-wrapper {
+            height: 100%;
+            width: 100%;
+            background: url(./placeholder.jpg) no-repeat center center;
+            background-size: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="index-video-wrapper" style="text-align:center">
+        <video id="myVideo" width="480" height="320" controls poster="placeholder.png">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <br>
+        <input type='file' value="./" onchange="readURL(this)">
+    </div>
+
+    <script>
+        var vid = document.getElementById("myVideo");
+        var flag = false;
+        document.addEventListener("keydown", function(event) {
+            if (event.keyCode == 32) {
+                if (flag == false) {
+                    vid.pause();
+                } else {
+                    vid.play();
+                }
+                flag = !flag;
+                // vid.playbackRate = 2;
+            }
+        });
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(event) {
+                    $('#myVideo').attr('src', event.target.result).load();
+                    vid.play();
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</body>
+
+</html>
