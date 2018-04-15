@@ -23,7 +23,7 @@
     <div class="container">
         <video width="480" height="320" controls autoplay poster="placeholder.png">
             <!-- <source src="video.mp4" type="video/mp4"> -->
-        </video>
+        </video><br>
         <input type="file" accept="video/*"/>
     </div>
 
@@ -101,8 +101,9 @@
             var URL = window.URL || window.webkitURL
             var playSelectedFile = function (event) {
                 var file = this.files[0]
+                var videoNode = document.querySelector('video')
                 var fileURL = URL.createObjectURL(file)
-                vid.src = fileURL
+                videoNode.src = fileURL
             }
             var inputNode = document.querySelector('input')
             inputNode.addEventListener('change', playSelectedFile, false)
