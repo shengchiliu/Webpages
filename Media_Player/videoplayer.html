@@ -8,42 +8,29 @@
             border: 2px solid #888;
         }
 
-        #myVideo {
-            /* height: 100%;
-            width: 100%; */
-            object-fit: contain;
-            z-index: -100;
-            right: 0;
-            bottom: 0;
-            background: url(placeholder.png) no-repeat center center;
-            background-size: contain;
-            overflow: hidden;
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
-        .index-video-wrapper {
-            height: 100%;
-            width: 100%;
-            background: url(placeholder.png) no-repeat center center;
-            background-size: contain;
-        }
     </style>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <!-- <script src="localplay.js"></script> -->
 </head>
 
 <body>
-    <div class="index-video-wrapper" style="text-align:center">
-        <video id="myVideo" width="480" height="320" controls autoplay poster="placeholder.png">
-            <!-- <source src="第二次课.mp4" type="video/mp4"> -->
+    <div class="container">
+        <video width="480" height="320" controls autoplay poster="placeholder.png">
+            <!-- <source src="video.mp4" type="video/mp4"> -->
         </video>
-        <br>
         <input type="file" accept="video/*"/>
     </div>
 
     <script>
         var vid = document.getElementById("myVideo");
 
-        // Pause
+        // Play/Pause
         document.addEventListener("keydown", function(event) {
             if (event.keyCode == 32) {
                 if (vid.paused) {
@@ -52,7 +39,7 @@
                     vid.pause();
                 }
             }
-        }); 
+        });
 
         // Speed Up
         document.addEventListener("keydown", function(event) {
