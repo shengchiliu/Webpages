@@ -124,8 +124,8 @@ $ scp -P PORT_NUMBER LOCAL_DIR USERNAME@IP_ADDRESS:ROMOTE_DIR       # ex. scp -P
 
 ---
 
-## 1. Install LAMP (Linux, Apache, MySQL, PHP)
-#### Install Apache
+## Install LAMP (Linux, Apache, MySQL, PHP)
+#### 1. Install Apache
 ```sh
 $ sudo apt-get update
 $ sudo apt-get install apache2
