@@ -168,10 +168,14 @@ $ sudo /etc/init.d/apache2 restart
 #### * Settings for Files Served to the Client
 ```
 # Directory of Apache Configuration File
-/etc/apache2/apache2.conf       # (Linux)
-/etc/apache2/httpd.conf         # (MacOS)
+/etc/apache2/apache2.conf           # (Linux)
+/etc/apache2/httpd.conf             # (MacOS)
 
 # Apache Web Root by default
-/var/www/html/                  # (Linux)
-/Library/WebServer/Documents/   $ (MacOS)
+/var/www/html/                      # (Linux)
+/Library/WebServer/Documents/       # (MacOS)
+
+# Setting File Permissions
+$ sudo chown USER_NAME FILE_NAME
+$ sudo chmod 777 DIRECTORY          # sudo chmod  o+w  DIRECTORY
 ```
