@@ -178,4 +178,8 @@ $ sudo /etc/init.d/apache2 restart
 # Setting File Permissions
 $ sudo chown USER_NAME FILE_NAME
 $ sudo chmod 777 DIRECTORY          # sudo chmod  o+w  DIRECTORY
+
+# Apache Error Logs
+/var/log/apache2/error.log
+
 ```
