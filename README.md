@@ -124,7 +124,7 @@ $ scp -P PORT_NUMBER LOCAL_DIR USERNAME@IP_ADDRESS:ROMOTE_DIR       # ex. scp -P
 
 ---
 
-## Install LAMP (Linux, Apache, MySQL, PHP)
+## 1. Install LAMP (Linux, Apache, MySQL, PHP)
 #### Install Apache
 ```sh
 $ sudo apt-get update
@@ -133,7 +133,7 @@ $ sudo apt-get install apache2
 # Open Browser with address http://localhost
 ```
 
-#### Install PHP
+#### 2. Install PHP
 ```sh
 $ sudo apt-get install php
 $ sudo /etc/init.d/apache2 restart
@@ -142,7 +142,7 @@ $ sudo vim /var/www/html/hello.php
 # Open Browser with address http://localhost/hello.php
 ```
 
-#### Install MySQL
+#### 3. Install MySQL
 ```sh
 $ sudo apt-get install mysql-server
 # Check MySQL
@@ -150,7 +150,7 @@ $ mysql -u root -p
 $ \q
 ```
 
-#### Install phpMyAdmin
+#### 4. Install phpMyAdmin
 ```sh
 $ sudo apt-get install phpmyadmin
 # Check phpMyAdmin
@@ -163,4 +163,15 @@ $ sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
 $ sudo service apache2 restart
 $ sudo /etc/init.d/apache2 restart
 # Open Browser with address http://localhost/phpmyadmin/
+```
+
+#### * Settings for Files Served to the Client
+```
+# Directory of Apache Configuration File
+/etc/apache2/apache2.conf       # (Linux)
+/etc/apache2/httpd.conf         # (MacOS)
+
+# Apache Web Root by default
+/var/www/html/                  # (Linux)
+/Library/WebServer/Documents/   $ (MacOS)
 ```
