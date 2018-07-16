@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var link = document.createElement("a");
+        //link.appendChild(document.createTextNode("Anchor"));
+        // link.href = "http://stackoverflow.com/questions/7932759/dom-appendchild-to-insert-images/7932803";
+        // link.alt = "Flash and JS are not enemies!";
+
+        var img = document.createElement("img");
+        img.src = "https://upload.wikimedia.org/wikipedia/commons/b/b4/KingsCollegeChapelWest.jpg";
+        link.appendChild(img);
+
+        document.body.appendChild(link);    
+    </script>
+</body>
+</html>
