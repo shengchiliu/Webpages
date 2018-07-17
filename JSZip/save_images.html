@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://fastcdn.org/FileSaver.js/1.1.20151003/FileSaver.min.js"></script> -->
+    <script src="./js/jszip.min.js"></script>
+    <script src="./js/FileSaver.min.js"></script>
+</head>
+<body>
+    <button id="blob" class="btn btn-primary">click to download</button>
+
+    <script>
+        // Declare JSZip
+        var zip = new JSZip();
+
+        // Create Folder
+        var img = zip.folder("images");
+        
+
+        // Save Multiple Files
+        var i
+        for (i = 0; i < 7; i++) {
+            // Save Text
+            zip.file("Hello" + i + ".txt", ("Hello World\n" + i));
+
+            // Save Image
+            // img.file("smile.gif", imgData, {base64: true});
+        }
+        
+        // Save into Zip 
+        // zip.generateAsync({type:"blob"})
+        // .then(function(content) {
+        //     // see FileSaver.js
+        //     saveAs(content, "./example.zip");
+        // });
+
+        jQuery("#blob").on("click", function () {
+            zip.generateAsync({type:"blob"}).then(function (blob) { // 1) generate the zip file
+                saveAs(blob, "hello.zip");                          // 2) trigger the download
+            }, function (err) {
+                jQuery("#blob").text(err);
+            });
+        });
+    
+    </script>
+</body>
+</html>
