@@ -8,19 +8,19 @@
 </head>
 
 <body>
+    <p></p><center>Game!</center><p></p>
     <center>
         <canvas id="cv" width="800" height="600">
             <p>Your browser does not support the canvas</p>
         </canvas>
         <br>
-        <!-- <select id="Difficulty">
+        <select id="Difficulty">
             <option value="Easy">Easy</option>
             <option value="Middle">Medium</option>
             <option value="Hard">Hard</option>
         </select>
-        <button onclick="degree()">Restart</button> -->
+        <button onclick="degree()">Restart</button>
     </center>
-    <p>Game!</p>
     <style>
         canvas {
             border: 1px solid black;
@@ -61,23 +61,24 @@
             ];
         }
 
-        // document.onmousedown=function(e){
-        //      bool=true;he=4;
-        // jump=setInterval(function(){
-        //         if(bool){
-        //                   if(yp >0){
-        //                        if(he>0){he-=0.1;}
-        //                        else{bool=false}
-        //                        yp-=he;
-        //                   }
-        //
-        //         }
-        //     },10);
-        // }
-        // document.onmouseup=function(e){
-        // clearInterval(jump,10);
-        //  bool=false;
-        // }
+        document.onmousedown=function(e){
+             bool=true;
+             he=4;
+        jump=setInterval(function(){
+                if(bool){
+                          if(yp >0){
+                               if(he>0){he-=0.1;}
+                               else{bool=false}
+                               yp-=he;
+                          }
+        
+                }
+            },10);
+        }
+        document.onmouseup=function(e){
+        clearInterval(jump,10);
+         bool=false;
+        }
 
         document.addEventListener("touchstart", touchstart);
         document.addEventListener("touchend", touchend);
@@ -127,7 +128,7 @@
                 } else if ((yp > _taille[i] && yp < _taille[i] + 200) && y + i * 50 + _vitesse[i] > 100 && y + i * 50 + _vitesse[i] < 120) {
                     score += 1;
                 }
-                cv.fillStyle = "#85754d";
+                cv.fillStyle = "red";
                 cv.fillRect(y + i * 50 + _vitesse[i], _taille[i], 20, 3);
                 cv.fillRect(y + i * 50 + _vitesse[i], _taille[i] + 200, 20, 3);
             }
